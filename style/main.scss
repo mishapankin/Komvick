@@ -9,17 +9,18 @@ $font-light: 400;
 $header-height: 45px;
 $footer-height: 50px;
 
+@mixin super-small {
+    @media only screen and (max-width: 345px) {
+        @content;
+    }
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     color: white;
     margin: 0;
-}
-
-@mixin super-small {
-    @media only screen and (max-width: 345px) {
-        @content;
-    }
+    padding: 0;
 }
 
 html {
