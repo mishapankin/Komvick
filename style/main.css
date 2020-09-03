@@ -15,7 +15,8 @@ body {
   height: 100%;
   background-image: url("../img/background.jpg");
   background-position: 50% 0;
-  background-size: auto 100vh;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 #container {
@@ -23,8 +24,8 @@ body {
   top: 0;
   left: 0;
   margin: 20px 29px;
-  width: calc(100% - 2 * 29px);
-  height: calc(100% - 2 * 20px);
+  width: calc(100vw - 2 * 29px);
+  height: calc(100vh - 2 * 20px);
 }
 
 header {
@@ -63,7 +64,7 @@ main {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 100%;
-  height: calc(100% - 50px - 45px);
+  height: calc(100vh - 50px - 45px);
 }
 
 main #title {
@@ -93,6 +94,7 @@ main form {
           justify-content: space-between;
   min-height: 150px;
   width: 100%;
+  max-width: 500px;
 }
 
 main form label {
@@ -100,7 +102,7 @@ main form label {
 }
 
 main form input, main form button {
-  border: none;
+  border: none !important;
   border-radius: 4px;
   padding: 12px 14px;
 }
