@@ -14,6 +14,11 @@ $footer-height: 50px;
         @content;
     }
 }
+@mixin virtual-keyboard {
+    @media only screen and (max-height: 440px) {
+        @content;
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -127,6 +132,10 @@ main {
 }
 
 footer {
+    @include virtual-keyboard() {
+        display: none;
+    }
+
     position: absolute;
     bottom: 0;
     left: 0;
