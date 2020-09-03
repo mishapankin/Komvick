@@ -29,9 +29,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     min-height: $min-page-vertical;
-    width: 100vw;
+    width: 100%;
 
     background-image: url("../img/background.jpg");
     background-position: 50% 0;
@@ -71,7 +71,7 @@ main {
     justify-content: space-evenly;
 
     width: 100%;
-    height: calc(100vh - #{$footer-height} - #{$header-height});
+    height: calc(100% - #{$footer-height} - #{$header-height});
     min-height: $min-page-vertical - $footer-height - $header-height - 2 * $global-v-padding;
 
     #title {
