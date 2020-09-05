@@ -16,15 +16,26 @@ main {
         margin: 1rem 0;
         overflow: auto;
         width: 100%;
+        max-width: 800px;
         max-height: 100%;
         h1 {
             font-size: 3rem;
             font-weight: cm.$font-bold;
             padding-bottom: 0.5rem;
+
+            @include cm.desktop {
+                font-weight: cm.$font-light;
+                font-size: 4rem;
+                padding-bottom: 2rem;
+            }
         }
-        h2 {
+        .indent {
             font-size: 1rem;
             font-weight: cm.$font-light;
+            @include cm.desktop {
+                font-size: 1.3rem;
+                line-height: 1.6rem;
+            }
         }
     }
 }

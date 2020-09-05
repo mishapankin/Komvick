@@ -11,6 +11,7 @@ main #content {
   margin: 1rem 0;
   overflow: auto;
   width: 100%;
+  max-width: 800px;
   max-height: 100%;
 }
 main #content h1 {
@@ -18,9 +19,22 @@ main #content h1 {
   font-weight: 700;
   padding-bottom: 0.5rem;
 }
-main #content h2 {
+@media only screen and (min-width: 901px) {
+  main #content h1 {
+    font-weight: 400;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+  }
+}
+main #content .indent {
   font-size: 1rem;
   font-weight: 400;
+}
+@media only screen and (min-width: 901px) {
+  main #content .indent {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */
