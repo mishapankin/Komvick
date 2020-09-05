@@ -8,7 +8,7 @@ def read_json(path):
 
 def build_template(name):
     pattern = r"\{\{([A-Za-z0-9_.]+)\}\}"
-    template = open(name + ".html", "r")
+    template = open("templates/" + name + ".html", "r")
 
     res_eng = open(name + "_eng.html", "w")
     json_eng = read_json("data/eng/eng.json")
@@ -37,7 +37,7 @@ def build_template(name):
     res_ru.close()
     res_eng.close()
 
-name_list = ["about"]
+name_list = ["index", "about"]
 
 for el in name_list: 
     build_template(el)

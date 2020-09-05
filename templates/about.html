@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комвик</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="img/logo.svg" alt="Komvick" srcset="">
+            <nav>
+                <ul>
+                    <li><a href="index_{{lang}}.html">{{main}}</a></li>
+                    <li><a href="about_{{lang}}.html">{{about}}</a></li>
+                    <li><a href="services_{{lang}}">{{services}}</a></li>
+                    <li><a href="services_{{lang}}">{{contacts}}</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="about{{lang_other}}.html"><strong>{{lang}}</strong> | {{lang_other}} </a>
+            </div>
+        </header>
+        <main>
+            <div id="content">
+                {{about.html}}
+            </div>
+        </main>
+        <footer id="footer">
+            <div>
+                <img src="img/home.svg" alt="" srcset="">
+                <span>{{main}}</span>
+            </div>
+            <div>
+                <img src="img/about.svg" alt="">
+                <span>{{about}}</span>
+            </div>
+            <div>
+                <img src="img/services.svg" alt="">
+                <span>{{services}}</span>
+            </div>
+            <div>
+                <img src="img/contacts.svg" alt="">
+                <span>{{contacts}}</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

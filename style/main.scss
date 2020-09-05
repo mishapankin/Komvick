@@ -13,7 +13,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    min-height: cm.$min-page-vertical;
+    // min-height: cm.$min-page-vertical;
     width: 100%;
 
     background-image: url("../../img/background.jpg");
@@ -56,20 +56,12 @@ header {
     }
 
     div {
-        a {
-            text-decoration: none;
-        }
-        // a:hover {
-        //     text-decoration: underline;
-        // }
+        @include cm.link_hover_anim;
         padding-left: 3rem;
         font-size: 20px;
         @include cm.super-small() {
             font-size: 15px;
             padding-left: 0;
-        }
-        &:hover {
-            transform: translateY(-3px);
         }
     }
 }

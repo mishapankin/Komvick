@@ -10,18 +10,21 @@ main {
 
     width: 100%;
     height: calc(100% - #{cm.$footer-height} - #{cm.$header-height});
-    min-height: cm.$min-page-vertical - cm.$footer-height - cm.$header-height - 2 * cm.$global-v-padding;
-
-    #title {
+    // min-height: cm.$min-page-vertical - cm.$footer-height - cm.$header-height - 2 * cm.$global-v-padding;
+    
+    #content {
+        margin: 1rem 0;
+        overflow: auto;
         width: 100%;
+        max-height: 100%;
         h1 {
-            font-size: 30px;
+            font-size: 3rem;
             font-weight: cm.$font-bold;
+            padding-bottom: 0.5rem;
         }
         h2 {
-            font-size: 15px;
+            font-size: 1rem;
             font-weight: cm.$font-light;
         }
     }
-
 }

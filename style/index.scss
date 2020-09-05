@@ -1,70 +1,78 @@
 @use "common" as cm;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
 main {
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    $padding-top: 1rem;
 
+    gap: 3rem;
+    
     width: 100%;
     height: calc(100% - #{cm.$footer-height} - #{cm.$header-height});
-    min-height: cm.$min-page-vertical - cm.$footer-height - cm.$header-height - 2 * cm.$global-v-padding;
-
-    #title {
-        width: 100%;
-        h1 {
-            @include cm.desktop() {
-                font-size: 40px;
-            }
-            font-size: 30px;
-            font-weight: cm.$font-bold;
-        }
-        h2 {
-            @include cm.desktop() {
-                font-size: 20px;
-            }
-            font-size: 15px;
-            font-weight: cm.$font-light;
-        }
-    }
-
-    form {
+    padding-top: $padding-top;
+    overflow: auto;
+    
+    .wrapper {
         display: flex;
         flex-flow: column;
-        justify-content: space-between;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        min-height: calc(100% - 2 * #{$padding-top});
 
-        min-height: 150px;
-        width: 100%;
-        max-width: 500px;
-        
-        label {
-            font-size: 26px;
-        }
-        input, button {
-            border: none !important;
-            border-radius: 4px;
-            padding: 12px 14px;
-        }
-        input {
-            color: #1d1d1d;
-            font-size: 18px;
+        #title {
             width: 100%;
-        }
-        input::placeholder {
-            color: #878787;
-        }
-        button {
-            background-color: #26B2C6;
-            font-weight: cm.$font-bold;
-            font-size: 18px;
-            &:hover {
-                background-color: #118da0;
+            h1 {
+                @include cm.desktop() {
+                    font-size: 40px;
+                }
+                font-size: 30px;
+                font-weight: cm.$font-bold;
             }
-            &:active {
-                background-color: #0a6a79;
+            h2 {
+                @include cm.desktop() {
+                    font-size: 20px;
+                }
+                font-size: 15px;
+                font-weight: cm.$font-light;
+            }
+        }
+    
+        form {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+    
+            min-height: 150px;
+            width: 100%;
+            max-width: 500px;
+            
+            label {
+                font-size: 26px;
+            }
+            input, button {
+                border: none !important;
+                border-radius: 4px;
+                padding: 12px 14px;
+            }
+            input {
+                color: #1d1d1d;
+                font-size: 18px;
+                width: 100%;
+            }
+            input::placeholder {
+                color: #878787;
+            }
+            button {
+                background-color: #26B2C6;
+                font-weight: cm.$font-bold;
+                font-size: 18px;
+                &:hover {
+                    background-color: #118da0;
+                }
+                &:active {
+                    background-color: #0a6a79;
+                }
             }
         }
     }
+
 }

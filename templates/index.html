@@ -13,43 +13,42 @@
             <img src="img/logo.svg" alt="Komvick" srcset="">
             <nav>
                 <ul>
-                    <li>Главная</li>
-                    <li>О нас</li>
-                    <li>Сервисы</li>
-                    <li>Контакты</li>
+                    <li><a href="index_{{lang}}.html">{{main}}</a></li>
+                    <li><a href="about_{{lang}}.html">{{about}}</a></li>
+                    <li><a href="services_{{lang}}">{{services}}</a></li>
+                    <li><a href="services_{{lang}}">{{contacts}}</a></li>
                 </ul>
             </nav>
             <div>
-                <strong>RU</strong> | eng
+                <a href="index_{{lang_other}}.html"><strong>{{lang}}</strong> | {{lang_other}} </a>
             </div>
         </header>
         <main>
-            <div id="title">
-                <h1>Обеспечиваем стабильность в изменчивом мире</h1>
-                <h2>Аудиторские и консалтинговые услуги</h2>
+            <div class="wrapper">
+                {{title.html}}
+                <form action="">
+                    <label for="phone">{{phone_word}}</label>
+                    <input type="tel" name="phone" placeholder="+7(123)456-78-90" id="input">
+                    <button type="submit">{{call_word}}</button>
+                </form>
             </div>
-            <form action="">
-                <label for="phone">Телефон</label>
-                <input type="tel" name="phone" placeholder="+7(123)456-78-90" id="input">
-                <button type="submit">Заказать звонок</button>
-            </form>
         </main>
         <footer id="footer">
             <div>
                 <img src="img/home.svg" alt="" srcset="">
-                <span>Главная</span>
+                <span>{{main}}</span>
             </div>
             <div>
                 <img src="img/about.svg" alt="">
-                <span>О нас</span>
+                <span>{{about}}</span>
             </div>
             <div>
                 <img src="img/services.svg" alt="">
-                <span>Сервисы</span>
+                <span>{{services}}</span>
             </div>
             <div>
                 <img src="img/contacts.svg" alt="">
-                <span>Контакты</span>
+                <span>{{contacts}}</span>
             </div>
         </footer>
     </div>

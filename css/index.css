@@ -1,35 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 main {
+  gap: 3rem;
+  width: 100%;
+  height: calc(100% - 50px - 45px);
+  padding-top: 1rem;
+  overflow: auto;
+}
+main .wrapper {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  width: 100%;
-  height: calc(100% - 50px - 45px);
-  min-height: 398px;
+  min-height: calc(100% - 2 * 1rem);
 }
-main #title {
+main .wrapper #title {
   width: 100%;
 }
-main #title h1 {
+main .wrapper #title h1 {
   font-size: 30px;
   font-weight: 700;
 }
 @media only screen and (min-width: 901px) {
-  main #title h1 {
+  main .wrapper #title h1 {
     font-size: 40px;
   }
 }
-main #title h2 {
+main .wrapper #title h2 {
   font-size: 15px;
   font-weight: 400;
 }
 @media only screen and (min-width: 901px) {
-  main #title h2 {
+  main .wrapper #title h2 {
     font-size: 20px;
   }
 }
-main form {
+main .wrapper form {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -37,31 +42,31 @@ main form {
   width: 100%;
   max-width: 500px;
 }
-main form label {
+main .wrapper form label {
   font-size: 26px;
 }
-main form input, main form button {
+main .wrapper form input, main .wrapper form button {
   border: none !important;
   border-radius: 4px;
   padding: 12px 14px;
 }
-main form input {
+main .wrapper form input {
   color: #1d1d1d;
   font-size: 18px;
   width: 100%;
 }
-main form input::placeholder {
+main .wrapper form input::placeholder {
   color: #878787;
 }
-main form button {
+main .wrapper form button {
   background-color: #26B2C6;
   font-weight: 700;
   font-size: 18px;
 }
-main form button:hover {
+main .wrapper form button:hover {
   background-color: #118da0;
 }
-main form button:active {
+main .wrapper form button:active {
   background-color: #0a6a79;
 }
 
