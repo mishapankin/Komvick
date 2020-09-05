@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Комвик</title>
-    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <div id="container">
@@ -12,14 +13,14 @@
             <img src="img/logo.svg" alt="Komvick" srcset="">
             <nav>
                 <ul>
-                    <li>Главная</li>
-                    <li>О нас</li>
-                    <li>Сервисы</li>
-                    <li>Контакты</li>
+                    <li>{{main}}</li>
+                    <li>{{about}}</li>
+                    <li>{{services}}</li>
+                    <li>{{contacts}}</li>
                 </ul>
             </nav>
             <div>
-                <strong>RU</strong> | eng
+                {{lang}}
             </div>
         </header>
         <main>

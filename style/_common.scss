@@ -2,6 +2,7 @@ $global-v-padding: 20px;
 $global-h-padding: 29px;
 
 $desktop-global-v-padding: 30px;
+$desktop-global-h-padding: 60px;
 
 $font-bold: 700;
 $font-light: 400;
@@ -11,3 +12,22 @@ $header-height: 45px;
 $footer-height: 50px;
 
 $min-page-vertical: 533px;
+
+@mixin super-small {
+    @media only screen and (max-width: 345px) {
+        @content;
+    }
+}
+ 
+@mixin desktop {
+    @media only screen and (min-width: 901px) {
+        @content;
+    }
+}
+
+@mixin link_hover_anim {
+    &:hover {
+        @content;
+        transform: translateY(-5px);
+    }
+}

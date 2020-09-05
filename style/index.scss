@@ -1,93 +1,6 @@
 @use "common" as cm;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-@mixin super-small {
-    @media only screen and (max-width: 345px) {
-        @content;
-    }
-}
- 
-@mixin desktop {
-    @media only screen and (min-width: 901px) {
-        @content;
-    }
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    min-height: cm.$min-page-vertical;
-    width: 100%;
-
-    background-image: url("../../img/background.jpg");
-    background-position: 50% 0;
-    background-size: auto;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: center;
-}
-
-
-#container {
-    position: absolute;
-    margin: cm.$global-v-padding cm.$global-h-padding;
-    @include desktop() {
-        margin: cm.$desktop-global-v-padding
-    }
-    width: calc(100% - 2 * #{cm.$global-h-padding});
-    height: calc(100% - 2 * #{cm.$global-v-padding});
-    max-width: 1600px;
-}
- 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    height: cm.$header-height;
-    @include desktop() { 
-        height: cm.$desktop-header-height;
-    }
-
-    img {
-        height: 100%;
-    }
-    nav {
-        display: none;
-        flex-grow: 1;
-        @include desktop() {
-            display: initial;
-        }
-        ul {
-            display: flex;
-            justify-content: flex-end;
-            gap: 2rem;
-            li {
-                list-style: none;
-            }
-        }
-    }
-
-    div {
-        padding-left: 3rem;
-        font-size: 20px;
-        @include super-small() {
-            font-size: 15px;
-            padding-left: 0.1rem;
-        }
-    }
-}
 
 main {
     display: flex;
@@ -102,14 +15,14 @@ main {
     #title {
         width: 100%;
         h1 {
-            @include desktop() {
+            @include cm.desktop() {
                 font-size: 40px;
             }
             font-size: 30px;
             font-weight: cm.$font-bold;
         }
         h2 {
-            @include desktop() {
+            @include cm.desktop() {
                 font-size: 20px;
             }
             font-size: 15px;
@@ -152,41 +65,6 @@ main {
             &:active {
                 background-color: #0a6a79;
             }
-        }
-    }
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    height: cm.$footer-height;
-    justify-content: space-between;
-    align-items: center;
-
-    @include desktop() {
-        display: none;
-    }
-
-    div {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        img {
-            width: 30px;
-            height: 30px;
-        }
-        span {
-            font-weight: cm.$font-light;
-            @include super-small() {
-                display: none;
-            }
-        }
-        &:active {
-            border-radius: 30px;
-            background-color: rgba(0, 0, 0, 0.3);
         }
     }
 }

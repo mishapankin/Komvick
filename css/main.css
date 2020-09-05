@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -20,19 +19,6 @@ body {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-}
-
-#container {
-  position: absolute;
-  margin: 20px 29px;
-  width: calc(100% - 2 * 29px);
-  height: calc(100% - 2 * 20px);
-  max-width: 1600px;
-}
-@media only screen and (min-width: 901px) {
-  #container {
-    margin: 30px;
-  }
 }
 
 header {
@@ -66,81 +52,24 @@ header nav ul {
 header nav ul li {
   list-style: none;
 }
+header nav ul li:hover {
+  transform: translateY(-5px);
+}
 header div {
   padding-left: 3rem;
   font-size: 20px;
 }
+header div a {
+  text-decoration: none;
+}
 @media only screen and (max-width: 345px) {
   header div {
     font-size: 15px;
-    padding-left: 0.1rem;
+    padding-left: 0;
   }
 }
-
-main {
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  width: 100%;
-  height: calc(100% - 50px - 45px);
-  min-height: 398px;
-}
-main #title {
-  width: 100%;
-}
-main #title h1 {
-  font-size: 30px;
-  font-weight: 700;
-}
-@media only screen and (min-width: 901px) {
-  main #title h1 {
-    font-size: 40px;
-  }
-}
-main #title h2 {
-  font-size: 15px;
-  font-weight: 400;
-}
-@media only screen and (min-width: 901px) {
-  main #title h2 {
-    font-size: 20px;
-  }
-}
-main form {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  min-height: 150px;
-  width: 100%;
-  max-width: 500px;
-}
-main form label {
-  font-size: 26px;
-}
-main form input, main form button {
-  border: none !important;
-  border-radius: 4px;
-  padding: 12px 14px;
-}
-main form input {
-  color: #1d1d1d;
-  font-size: 18px;
-  width: 100%;
-}
-main form input::placeholder {
-  color: #878787;
-}
-main form button {
-  background-color: #26B2C6;
-  font-weight: 700;
-  font-size: 18px;
-}
-main form button:hover {
-  background-color: #118da0;
-}
-main form button:active {
-  background-color: #0a6a79;
+header div:hover {
+  transform: translateY(-3px);
 }
 
 footer {
@@ -180,4 +109,19 @@ footer div:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/*# sourceMappingURL=index.css.map */
+#container {
+  position: absolute;
+  margin: 20px 0;
+  width: calc(100% - 2 * 29px);
+  height: calc(100% - 2 * 20px);
+  max-width: 1600px;
+}
+@media only screen and (min-width: 901px) {
+  #container {
+    margin: 30px 0;
+    height: calc(100% - 2 * 30px);
+    width: calc(100% - 2 * 60px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

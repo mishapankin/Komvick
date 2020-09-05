@@ -1,0 +1,10 @@
+{
+    "main": "Главная",
+    "title": "Комвик",
+    "about": "О нас",
+    "services": "Сервисы",
+    "contacts": "Контакты",
+    "lang": "<a href='about_eng.html'><strong>RU</strong> | eng</a>",
+    "address": "ООО «КАФ»Комвик 99» Москва ул.Долгоруковская, д.34 строен.2 офис 414",
+    "contacts_body": "contacts"
+}
