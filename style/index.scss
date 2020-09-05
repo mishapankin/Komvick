@@ -1,0 +1,192 @@
+@use "common" as cm;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@mixin super-small {
+    @media only screen and (max-width: 345px) {
+        @content;
+    }
+}
+ 
+@mixin desktop {
+    @media only screen and (min-width: 901px) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: cm.$min-page-vertical;
+    width: 100%;
+
+    background-image: url("../../img/background.jpg");
+    background-position: 50% 0;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+#container {
+    position: absolute;
+    margin: cm.$global-v-padding cm.$global-h-padding;
+    @include desktop() {
+        margin: cm.$desktop-global-v-padding
+    }
+    width: calc(100% - 2 * #{cm.$global-h-padding});
+    height: calc(100% - 2 * #{cm.$global-v-padding});
+    max-width: 1600px;
+}
+ 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: cm.$header-height;
+    @include desktop() { 
+        height: cm.$desktop-header-height;
+    }
+
+    img {
+        height: 100%;
+    }
+    nav {
+        display: none;
+        flex-grow: 1;
+        @include desktop() {
+            display: initial;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            li {
+                list-style: none;
+            }
+        }
+    }
+
+    div {
+        padding-left: 3rem;
+        font-size: 20px;
+        @include super-small() {
+            font-size: 15px;
+            padding-left: 0.1rem;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: calc(100% - #{cm.$footer-height} - #{cm.$header-height});
+    min-height: cm.$min-page-vertical - cm.$footer-height - cm.$header-height - 2 * cm.$global-v-padding;
+
+    #title {
+        width: 100%;
+        h1 {
+            @include desktop() {
+                font-size: 40px;
+            }
+            font-size: 30px;
+            font-weight: cm.$font-bold;
+        }
+        h2 {
+            @include desktop() {
+                font-size: 20px;
+            }
+            font-size: 15px;
+            font-weight: cm.$font-light;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        min-height: 150px;
+        width: 100%;
+        max-width: 500px;
+        
+        label {
+            font-size: 26px;
+        }
+        input, button {
+            border: none !important;
+            border-radius: 4px;
+            padding: 12px 14px;
+        }
+        input {
+            color: #1d1d1d;
+            font-size: 18px;
+            width: 100%;
+        }
+        input::placeholder {
+            color: #878787;
+        }
+        button {
+            background-color: #26B2C6;
+            font-weight: cm.$font-bold;
+            font-size: 18px;
+            &:hover {
+                background-color: #118da0;
+            }
+            &:active {
+                background-color: #0a6a79;
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: cm.$footer-height;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop() {
+        display: none;
+    }
+
+    div {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        span {
+            font-weight: cm.$font-light;
+            @include super-small() {
+                display: none;
+            }
+        }
+        &:active {
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+}
