@@ -56,7 +56,7 @@ main .wrapper form input {
   width: 100%;
 }
 main .wrapper form input::placeholder {
-  color: #878787;
+  color: #303030;
 }
 main .wrapper form button {
   background-color: #26B2C6;

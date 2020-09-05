@@ -80,10 +80,11 @@ footer {
         display: none;
     }
 
-    div {
+    a {
         display: flex;
         flex-flow: column;
         align-items: center;
+        text-decoration: none;
         img {
             width: 30px;
             height: 30px;

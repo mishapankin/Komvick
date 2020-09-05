@@ -89,24 +89,25 @@ footer {
     display: none;
   }
 }
-footer div {
+footer a {
   display: flex;
   flex-flow: column;
   align-items: center;
+  text-decoration: none;
 }
-footer div img {
+footer a img {
   width: 30px;
   height: 30px;
 }
-footer div span {
+footer a span {
   font-weight: 400;
 }
 @media only screen and (max-width: 345px) {
-  footer div span {
+  footer a span {
     display: none;
   }
 }
-footer div:active {
+footer a:active {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.3);
 }
