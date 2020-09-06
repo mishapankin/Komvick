@@ -37,7 +37,7 @@ def build_template(name):
     res_ru.close()
     res_eng.close()
 
-name_list = ["index", "about"]
+name_list = ["index", "about", "contacts", "services"]
 
 for el in name_list: 
     build_template(el)

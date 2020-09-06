@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Комвик</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contacts.css">
 </head>
 <body>
     <div id="container">
@@ -20,18 +20,30 @@
                 </ul>
             </nav>
             <div>
-                <a href="index_{{lang_other}}.html"><strong>{{lang}}</strong> | {{lang_other}} </a>
+                <a href="contacts_{{lang_other}}.html"><strong>{{lang}}</strong> | {{lang_other}} </a>
             </div>
         </header>
         <main>
-            <div class="wrapper">
-                {{title.html}}
-                <form action="">
-                    <label for="phone">{{phone_word}}</label>
-                    <input type="tel" name="phone" placeholder="+7(123)456-78-90" id="input">
-                    <button type="submit">{{call_word}}</button>
-                </form>
+            <!-- <h1>
+                {{contacts}}
+            </h1>
+            <div class="card">
+                <div class="contacts">
+                    {{contacts2.html}}
+                </div>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCQpFAqG9B"
+                frameborder="0" allowfullscreen="true"></iframe>
+            </div> -->
+            <div class="contacts">
+                <h1>
+                    {{contacts}}
+                </h1>
+                <span>
+                    {{contacts2.html}}
+                </span>
             </div>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCQpFAqG9B"
+            frameborder="0" allowfullscreen="true"></iframe>
         </main>
         <footer id="footer">
             <a href="index_{{lang}}.html">

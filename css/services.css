@@ -26,15 +26,21 @@ main #content h1 {
     padding-bottom: 2rem;
   }
 }
-main #content p {
+main #content .service {
+  display: none;
+}
+main #content .service p {
   font-size: 1rem;
   font-weight: 400;
 }
 @media only screen and (min-width: 901px) {
-  main #content p {
+  main #content .service p {
     font-size: 1.3rem;
     line-height: 1.6rem;
   }
 }
+main #content .active {
+  display: initial;
+}
 
-/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=services.css.map */

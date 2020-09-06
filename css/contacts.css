@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 50px - 45px);
+}
+@media only screen and (min-width: 550px) {
+  main {
+    justify-content: space-between;
+  }
+}
+main .contacts h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (min-width: 901px) {
+  main .contacts h1 {
+    font-weight: 400;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+  }
+}
+main .contacts span {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+main .contacts span ul li {
+  text-indent: 3rem;
+  list-style: none;
+}
+main .contacts span ul li a {
+  text-decoration: none;
+}
+main .contacts span ul li a:hover {
+  text-decoration: underline;
+}
+main iframe {
+  display: none;
+}
+@media only screen and (min-width: 550px) {
+  main iframe {
+    height: 60%;
+    width: 50%;
+    display: initial;
+  }
+}
+
+/*# sourceMappingURL=contacts.css.map */
