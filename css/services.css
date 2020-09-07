@@ -84,13 +84,14 @@ main #content h1 {
 .glide__slide h2 {
   padding-bottom: 1rem;
 }
-.glide__slide p {
+.glide__slide div {
   font-size: 1rem;
+  line-height: 1.4rem;
   font-weight: 400;
 }
 @media only screen and (min-width: 901px) {
-  .glide__slide p {
-    font-size: 1.3rem;
+  .glide__slide div {
+    font-size: 1.1rem;
     line-height: 1.6rem;
   }
 }
