@@ -1,6 +1,6 @@
 @use "common" as cm;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "../glide-3.4.1/src/assets/sass/glide.core";
 
 
 main {
@@ -17,7 +17,7 @@ main {
         margin: 1rem 0;
         overflow: auto;
         width: 100%;
-        max-width: 800px;
+        max-width: 1200px;
         max-height: 100%;
         h1 {
             font-size: 3rem;
