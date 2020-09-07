@@ -11,6 +11,9 @@ main {
 
     width: 100%;
     height: calc(100% - #{cm.$footer-height} - #{cm.$header-height});
+    @include cm.desktop {
+        height: auto;
+    }
     // min-height: cm.$min-page-vertical - cm.$footer-height - cm.$header-height - 2 * cm.$global-v-padding;
     
     #content {
@@ -19,6 +22,7 @@ main {
         width: 100%;
         max-width: 1200px;
         max-height: 100%;
+
         h1 {
             font-size: 3rem;
             font-weight: cm.$font-bold;

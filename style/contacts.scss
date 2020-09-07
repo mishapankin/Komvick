@@ -2,87 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 
-// main {
-//     display: flex;
-//     flex-flow: row;
-//     flex-wrap: wrap;
-//     align-items: center;
-//     justify-content: space-evenly;
-
-//     width: 100%;
-//     height: calc(100% - #{cm.$footer-height} - #{cm.$header-height});
-    
-//     #content {
-//         margin: 1rem 0;
-//         overflow: auto;
-//         width: 100%;
-//         max-width: 800px;
-//         max-height: 100%;
-//         h1 {
-//             font-size: 3rem;
-//             font-weight: cm.$font-bold;
-//             padding-bottom: 0.5rem;
-
-//             @include cm.desktop {
-//                 font-weight: cm.$font-light;
-//                 font-size: 4rem;
-//                 padding-bottom: 2rem;
-//             }
-//         }
-//         .p {
-//             font-size: 1rem;
-//             font-weight: cm.$font-light;
-//             @include cm.desktop {
-//                 font-size: 1.3rem;
-//                 line-height: 1.6rem;
-//             }
-//         }
-//     }
-
-// }
-
-// main {
-//     display: grid;
-//     place-items: center;
-
-//     width: 100%;
-//     height: calc(100% - #{cm.$footer-height} - #{cm.$header-height});
-
-//         h1 {
-//         font-size: 3rem;
-//         font-weight: cm.$font-bold;
-//         padding-bottom: 0.5rem;
-
-//         @include cm.desktop {
-//             font-weight: cm.$font-light;
-//             font-size: 4rem;
-//             padding-bottom: 2rem;
-//         }
-//     }
-
-//     .card {
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: center;
-//         flex-wrap: wrap;
-//         width: 100%;
-
-
-//         .contacts {
-//             width: 50%;
-//         }
-//         iframe {
-//             display: none;
-//             width: min(max(50%, 400px), 100%);
-//             height: 400px;
-
-//             @include cm.desktop {
-//                 display: initial;
-//             }
-//         }
-//     }
-// }
-
 main {
     display: flex;
     flex-direction: row;
@@ -131,5 +50,6 @@ main {
             width: 50%;
             display: initial;
         }
+        background-color: rgba($color: #000000, $alpha: 0.1);
     }
 }

@@ -40,6 +40,7 @@ main .contacts span ul li a:hover {
 }
 main iframe {
   display: none;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 @media only screen and (min-width: 550px) {
   main iframe {
