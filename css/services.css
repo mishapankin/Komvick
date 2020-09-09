@@ -121,10 +121,10 @@ main #content h1 {
   height: 4px;
   border-radius: 2px;
   background-color: white;
+  transition: opacity 100ms;
 }
-
 .glide__bullet:hover .line {
-  background-color: #74a9c2;
+  opacity: 0.5;
 }
 
 .glide__bullet--active .line {

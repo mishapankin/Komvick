@@ -14,7 +14,6 @@ main {
     @include cm.desktop {
         height: auto;
     }
-    // min-height: cm.$min-page-vertical - cm.$footer-height - cm.$header-height - 2 * cm.$global-v-padding;
     
     #content {
         margin: 1rem 0;
@@ -69,14 +68,16 @@ main {
         height: 4px;
         border-radius: 2px;
         background-color: white;
+        transition: opacity 100ms;
+    }
+
+    &:hover {
+        .line {
+            opacity: 0.5;
+        }
     }
 }
 
-.glide__bullet:hover {
-    .line {
-        background-color: #74a9c2;
-    }
-}
 
 .glide__bullet--active {
     .line {

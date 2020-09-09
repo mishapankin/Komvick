@@ -12,12 +12,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    // height: 100vh;
-    overflow: none;
-    // min-height: -webkit-fill-available;
-    // min-height: cm.$min-page-vertical;
-    width: 100%;
+
+    overflow: auto;
+    height: 100vh;
+    width: 100vw;
 
     background-image: url("../img/background.jpg");
     background-position: 50% 0;
